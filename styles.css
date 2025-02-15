@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: column; /*öğeler dikey yerleşsin diye */
+  align-items: center; /*öğeler yatayda ortalansın diye */
+  margin: 0;
+  background-color: #0f3914;
+  text-align: center; /*öğeler dikeyde ortalansın diye */
+  height: 100vh;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+h1 {
+  font-size: 4rem;
+  color: #89e47b;
+  font-family: "sans-serif", cursive;
+  text-shadow: 3px 0 #9b3737;
+  margin-bottom: 300px;
+}
+
+#container {
+  position: relative;/* öğe normal akışta kalır. */
+}
+
+#daisyGroup {
+  position: relative;   /*container a göre konumlanacak parenta göre.*/
+}
+#daisyBody {
+  width: 300px;
+  height: auto;
+}
+#daisyHead {
+  position: absolute; /*bu durumda öğe diğer öğelerin konumlarını etkilemez, en yakın parenta göre konumlandırılır. diğer öğeler tarafından etkilenmez */
+  left: 50%;             
+  top: -80px;             
+  transform: translateX(-50%); /*öğenin kendi genişliğinin yarısı kadar sola kaydırarak tam ortalanmasını sağlar, öğe tam ortada olsun diye */
+  width: 120px;         
+  height: auto;
+}
+.petal {
+  position: absolute;
+  width: 60px;
+  height: auto;
+}
+footer {
+  color: #cac11f;
+  font-family: sans-serif;
+  margin: 10px 0;
+}
